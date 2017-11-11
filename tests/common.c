@@ -22,7 +22,7 @@
 
 #include "common.h"
 
-CJSON_PUBLIC(void) reset(cJSON *item)
+void reset(cJSON *item)
 {
     if ((item != NULL) && (item->child != NULL))
     {
@@ -40,7 +40,7 @@ CJSON_PUBLIC(void) reset(cJSON *item)
     memset(item, 0, sizeof(cJSON));
 }
 
-CJSON_PUBLIC(char*) read_file(const char *filename)
+char * read_file(const char *filename)
 {
     FILE *file = NULL;
     long length = 0;
